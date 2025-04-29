@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Issues in House Administration</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Open Issues in House Administration</h1>
+      <p class="subtitle">Tracking promises waiting to be fulfilled</p>
+    </header>
+
+    <div class="actions">
+      <button id="addIssueBtn" class="btn"><i class="fas fa-plus"></i> Add New Issue</button>
+    </div>
+
+    <div class="issues-container">
+      <div id="issues-list" class="issues-list">
+        <!-- Issues will be loaded here dynamically -->
+        <div class="loading">Loading issues...</div>
+      </div>
+    </div>
+
+    <!-- Add/Edit Issue Modal -->
+    <div id="issueModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Add New Issue</h2>
+        <form id="issueForm">
+          <input type="hidden" id="issueId">
+          
+          <div class="form-group">
+            <label for="issueTitle">Issue Title</label>
+            <input type="text" id="issueTitle" required placeholder="Enter issue title">
+          </div>
+          
+          <div class="form-group">
+            <label for="issueDescription">Description</label>
+            <textarea id="issueDescription" required placeholder="Enter detailed description"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="issueDatePromised">Date Promised</label>
+            <input type="date" id="issueDatePromised" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="issueStatus">Status</label>
+            <select id="issueStatus">
+              <option value="pending">Pending</option>
+              <option value="in-progress">In Progress</option>
+              <option value="completed">Completed</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-submit">Save Issue</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Date at the footer -->
+  <footer>
+    <p>Current Date: <span id="current-date"></span></p>
+    <p>Time since first promise: <span id="time-since"></span></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

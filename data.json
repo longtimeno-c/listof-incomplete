@@ -1,0 +1,25 @@
+{
+  "issues": [
+    {
+      "id": 1,
+      "title": "Yearly resoloution of more pizzas",
+      "description": "Current count = 1",
+      "datePromised": "2025-1-10",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "title": "Pizza Oven!!",
+      "description": "House promised a pizza oven.",
+      "datePromised": "2025-01-10",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "title": "Freezer for summer ice creams",
+      "description": "House current has no freezer for ice creams",
+      "datePromised": "2024-12-10",
+      "status": "pending"
+    }
+  ]
+}
